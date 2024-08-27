@@ -70,8 +70,8 @@ function M.New(siteKey, secretKey, TemplateFilePath)
       return "no verifier backend provided, can't use captcha"
     end
     for k, v in pairs(core.backends["captcha_verifier"].servers) do
-     	M.CaptchaProvider = utils.split(v.name, "_")[1]
-	M.CaptchaServerName = v.name
+     	M.CaptchaProvider = utils.split(v:get_name(), "_")[1]
+	M.CaptchaServerName = v:get_name()
     end
     if M.CaptchaProvider == nil then
       return "no verifier backend provided, can't use captcha"
