@@ -241,7 +241,7 @@ local function refresh_decisions(is_startup)
             -- If the bouncers gets a lot of IPs to delete, we will block the whole process
             -- preventing it from answering any request, and the process will restart
             -- after 30s.
-            core.msleep(1)
+            core.msleep(2)
         end
       end
     end
@@ -256,7 +256,7 @@ local function refresh_decisions(is_startup)
             -- If the bouncers gets a lot of IPs, we will block the whole process
             -- preventing it from answering any request, and the process will restart
             -- after 30s.
-            core.msleep(1)
+            core.msleep(2)
         end
       end
     end
